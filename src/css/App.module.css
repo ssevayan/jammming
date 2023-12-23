@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background: linear-gradient(to top, transparent, rgb(88, 153, 207)), url("../media/background.jpg"); */
+  background-image: url(../media/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Fixed background */
+}
+
+.h1 {
+  /* background-color: #ffa4b6da; */
+  background: linear-gradient(to left, rgba(0, 0, 0, 0),#ffa4b6, rgba(0, 0, 0, 0)); 
+  text-align: center;
+  margin-top: 0;
+  padding: 0.5rem 0;
+  color:#0b1354;
+  font-size: 1.8rem;
+}
+
+.list {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 599px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+}
