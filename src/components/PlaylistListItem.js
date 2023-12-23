@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from '../css/PlaylistListItem.module.css';
 
-function PlaylistListItem({ id, name, onSelectedPlaylist }) {
+function PlaylistListItem({ name }) {
     return (
-        <li onClick={() => {onSelectedPlaylist(id)}}>
+        <li className={styles.li}>
             {name}
         </li>
     );

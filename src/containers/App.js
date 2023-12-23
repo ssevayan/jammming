@@ -151,31 +151,15 @@ function App() {
     }
   };
 
-  const handleCreateNewPlaylist = () => {
-    // Clear the current playlist information
-    setPlaylistId(null);
-    setPlaylistName('');
-    setPlaylistTracks([]);
-  };
-
   return (
     <div>
       <h1 className={styles.h1}>‪‪❤︎‬ Jammming ‪‪❤︎‬</h1>
 
-      <div>
-        <SearchBar 
-          searchTerm={searchTerm} 
-          searchBarChangeHandler={searchBarChangeHandler} 
-          handleSearch={handleSearch}
-        />
-
-        <PlaylistList 
-          playlists={playlists} 
-          onSelectedPlaylist={handleSelectPlaylist} 
-          handleCreateNewPlaylist={handleCreateNewPlaylist}
-        />
-      </div>
-
+      <SearchBar 
+        searchTerm={searchTerm} 
+        searchBarChangeHandler={searchBarChangeHandler} 
+        handleSearch={handleSearch}
+      />
 
       <div className={styles.list}>
         <SearchResults 
@@ -191,6 +175,11 @@ function App() {
           savePlaylist={savePlaylist}
         />
       </div>
+
+      <PlaylistList 
+        playlists={playlists} 
+        onSelectedPlaylist={handleSelectPlaylist} 
+      />
 
     </div>
   );
