@@ -15,7 +15,7 @@ function App() {
   const [playlistName, setPlaylistName] = useState('');
   const [playlists, setPlaylists] = useState([]);
   const [playlistId, setPlaylistId] = useState('');
-  const [createNewPlaylist, setCreateNewPlaylist] = useState(false);
+
   const [tracksToRemove, setTracksToRemove] = useState([]);
 
   useEffect(() => {
@@ -152,8 +152,6 @@ function App() {
   };
 
   const handleCreateNewPlaylist = () => {
-    // Set the state to indicate that the user wants to create a new playlist
-    setCreateNewPlaylist(true);
     // Clear the current playlist information
     setPlaylistId(null);
     setPlaylistName('');
